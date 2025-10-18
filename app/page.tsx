@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Play, FileText } from "lucide-react"
-import { Card } from "@/components/ui/card"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Play, FileText } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -23,15 +23,19 @@ export default function HomePage() {
             </div>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              Heb jij een Ufunded-account gekocht of coaching gevolgd bij de Trade Academy? Dan kun je je geld
-              terugkrijgen!
+              Heb jij een Ufunded-account gekocht of coaching gevolgd bij de
+              Trade Academy? Dan kun je je geld terugkrijgen!
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <Button
                 size="lg"
                 className="w-full sm:w-auto"
-                onClick={() => document.getElementById("video-section")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  document
+                    .getElementById("video-section")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 <Play className="h-5 w-5 mr-2" />
                 Bekijk Video
@@ -41,7 +45,11 @@ export default function HomePage() {
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto bg-transparent"
-                onClick={() => document.getElementById("form-section")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  document
+                    .getElementById("form-section")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 <FileText className="h-5 w-5 mr-2" />
                 Meld je aan voor de claim
@@ -54,12 +62,15 @@ export default function HomePage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <Card className="overflow-hidden bg-card border-border">
-                <div className="aspect-video bg-muted relative">
-                  <video controls className="w-full h-full" poster="/video-thumbnail.png">
-                    <source src="/your-video.mp4" type="video/mp4" />
-                    <source src="/your-video.webm" type="video/webm" />
-                    Uw browser ondersteunt de video tag niet.
-                  </video>
+                <div className="relative aspect-video bg-muted">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/L27SihanAB0?rel=0"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </Card>
             </div>
@@ -74,8 +85,8 @@ export default function HomePage() {
                   Meld je aan voor de claim
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-                  Vul het formulier hieronder in om deel te nemen aan de collectieve claim tegen de Trade Academy en
-                  Ufunded
+                  Vul het formulier hieronder in om deel te nemen aan de
+                  collectieve claim tegen de Trade Academy en Ufunded
                 </p>
               </div>
 
@@ -93,5 +104,5 @@ export default function HomePage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
