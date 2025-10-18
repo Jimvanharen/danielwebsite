@@ -13,7 +13,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="flex justify-center">
               <Image
-                src="/images/design-mode/Stop%20Finfluencers%20Logo.png"
+                src="/stopfin.png"
                 alt="Stop Finfluencers"
                 width={800}
                 height={150}
